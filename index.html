@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>缪宏基的个人主页</title>
+    <style>
+        /* 全局样式重置+基础美化 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            font-family: "微软雅黑", "Microsoft YaHei", Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            /* 高级渐变背景，柔和不刺眼 */
+            background: linear-gradient(120deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        /* 页面主标题样式 */
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 32px;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        /* 所有二级标题样式统一 */
+        h2 {
+            color: #3498db;
+            font-size: 20px;
+            margin: 35px 0 15px 0;
+            padding-left: 10px;
+            border-left: 4px solid #3498db;
+            font-weight: 600;
+        }
+
+        /* 核心美化：照片圆形裁剪+边框+阴影+居中 */
+        .my-photo {
+            width: 200px;
+            height: 200px;
+            /* 圆形照片核心代码 */
+            border-radius: 50%;
+            /* 保持照片比例不变形 */
+            object-fit: cover;
+            /* 居中显示 */
+            display: block;
+            margin: 0 auto 20px auto;
+            /* 立体阴影+边框，高级感拉满 */
+            border: 5px solid #fff;
+            box-shadow: 0 0 20px rgba(52, 152, 219, 0.2);
+            transition: transform 0.3s ease;
+        }
+        /* 照片悬停放大特效 */
+        .my-photo:hover {
+            transform: scale(1.05);
+        }
+
+        /* 段落文本美化 */
+        p {
+            font-size: 16px;
+            color: #555;
+            margin: 10px 0;
+            text-align: justify;
+        }
+
+        /* 列表美化（技能/学习计划/网站） */
+        ul, ol {
+            margin: 15px 0 15px 30px;
+            color: #555;
+        }
+        li {
+            font-size: 16px;
+            margin: 8px 0;
+            list-style-position: outside;
+        }
+        /* 超链接美化 */
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        /* 联系表格极致美化 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        th {
+            background: #3498db;
+            color: #fff;
+            font-weight: 500;
+            font-size: 17px;
+        }
+        th, td {
+            padding: 16px;
+            text-align: center;
+            border: none;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        tr:hover {
+            background: #eef5fb;
+            transition: background 0.2s ease;
+        }
+
+        /* 留言表单高级美化 */
+        form {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            margin-top: 15px;
+        }
+        label {
+            font-size: 16px;
+            color: #555;
+            font-weight: 500;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 8px 0 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 15px;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+        /* 输入框选中高亮效果 */
+        input:focus, textarea:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+        textarea {
+            resize: none;
+            min-height: 120px;
+        }
+        /* 提交按钮渐变+悬浮特效 */
+        button {
+            padding: 12px 30px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        /* 页脚美化 */
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<!-- 页面主标题 -->
+<h1>欢迎来到缪宏基的个人主页</h1>
+
+<!-- 关于我（含圆形照片） -->
+<h2>关于我</h2>
+<img src="b51a14f9d0b0a61aaaa94b0688f16800383238159.jpg"
+     alt="缪宏基的个人照片"
+     class="my-photo">
+<p>大家好！我叫缪宏基，今年20岁，是一名计算机专业的大学生。</p>
+<p>我热爱编程、阅读和打篮球，始终保持积极向上的学习态度。我的座右铭是：<strong style="color:#3498db;">学无止境，每天进步一点点。</strong></p>
+
+<!-- 我的技能 -->
+<h2>我的技能</h2>
+<ul>
+    <li>HTML 网页制作与开发</li>
+    <li>Python 程序设计与编程</li>
+    <li>Office 全套办公软件精通</li>
+    <li>摄影创作与图片精修</li>
+</ul>
+
+<!-- 我的学习计划 -->
+<h2>我的学习计划</h2>
+<ol>
+    <li>深耕 HTML + CSS 前端基础，夯实网页制作能力</li>
+    <li>系统学习 JavaScript，实现网页交互功能开发</li>
+    <li>进阶学习前端框架，提升项目开发效率</li>
+    <li>独立完成个人作品集网站，综合运用所学技能</li>
+</ol>
+
+<!-- 我喜欢的网站 -->
+<h2>我喜欢的网站</h2>
+<p>以下是我日常学习、生活中经常访问的优质网站：</p>
+<ul>
+    <li><a href="https://www.baidu.com" target="_blank">百度 - 全能搜索引擎</a></li>
+    <li><a href="https://www.bilibili.com" target="_blank">哔哩哔哩 - 学习视频平台</a></li>
+    <li><a href="https://github.com" target="_blank">GitHub - 全球代码托管平台</a></li>
+</ul>
+
+<!-- 联系我（你的真实信息） -->
+<h2>联系我</h2>
+<table>
+    <tr>
+        <th>联系方式</th>
+        <th>详细信息</th>
+    </tr>
+    <tr>
+        <td>邮箱</td>
+        <td>1923044771@qq.com</td>
+    </tr>
+    <tr>
+        <td>电话</td>
+        <td>13890033372</td>
+    </tr>
+    <tr>
+        <td>地址</td>
+        <td>四川省自贡市</td>
+    </tr>
+</table>
+
+<!-- 给我留言 -->
+<h2>给我留言</h2>
+<form>
+    <p>
+        <label>你的名字：</label><br>
+        <input type="text" name="name" placeholder="请输入你的姓名" required>
+    </p>
+    <p>
+        <label>你的邮箱：</label><br>
+        <input type="email" name="email" placeholder="请输入你的邮箱，方便我回复你" required>
+    </p>
+    <p>
+        <label>留言内容：</label><br>
+        <textarea name="message" placeholder="想说的话都可以写在这里哦..." required></textarea>
+    </p>
+    <button type="submit">提交留言</button>
+</form>
+
+<!-- 页脚版权 -->
+<footer>
+    <p>版权所有 © 2026 缪宏基 | 个人专属主页 · 用心制作</p>
+</footer>
+</body>
+</html>
